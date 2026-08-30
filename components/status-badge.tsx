@@ -1,0 +1,3 @@
+import type { OrderStatus } from "@/lib/types";
+const styles:Record<OrderStatus,string>={"طلب جديد":"bg-sky-50 text-sky-700 border-sky-100","في انتظار الوثائق":"bg-amber-50 text-amber-700 border-amber-100","جاهز للمعالجة":"bg-cyan-50 text-cyan-700 border-cyan-100","قيد الإنجاز":"bg-blue-50 text-blue-700 border-blue-100","في انتظار الرد":"bg-violet-50 text-violet-700 border-violet-100","مكتمل":"bg-emerald-50 text-emerald-700 border-emerald-100","ملغى":"bg-rose-50 text-rose-700 border-rose-100"};
+export default function StatusBadge({status}:{status:OrderStatus}){return <span className={`inline-flex rounded-full border px-2.5 py-1 text-[11px] font-black ${styles[status]}`}>{status}</span>}
