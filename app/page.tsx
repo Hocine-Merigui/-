@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, BriefcaseBusiness, Building2, GraduationCap, Monitor, School, ShieldCheck, Sparkles, UserRoundSearch, WalletCards } from "lucide-react";
+import { ArrowLeft, BookOpenCheck, BriefcaseBusiness, Building2, GraduationCap, Monitor, School, ShieldCheck, Sparkles, UserRoundSearch, WalletCards } from "lucide-react";
 const groups=[
  {title:"التسجيلات الجامعية",desc:"التسجيلات الأولية والمنحة الجامعية",icon:GraduationCap},
  {title:"التربية والتعليم",desc:"فضاء الأولياء والأساتذة ومنحة التمدرس",icon:School},
@@ -29,6 +29,11 @@ export default function Home(){return <main dir="rtl" className="mesh-bg min-h-s
     </div>
    </div>
   </section>
-  <section id="services" className="mx-auto max-w-7xl px-4 pb-20 md:px-8"><div className="mb-7"><p className="text-sm font-black text-blue-600">الخدمات</p><h2 className="mt-2 text-3xl font-black text-slate-950">كل الأقسام في واجهة واحدة</h2></div><div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">{groups.map(({title,desc,icon:Icon})=><article key={title} className="card-hover rounded-3xl border border-slate-200 bg-white p-5 shadow-sm"><div className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-blue-600"><Icon size={22}/></div><h3 className="font-black text-slate-900">{title}</h3><p className="mt-2 text-xs font-medium leading-6 text-slate-400">{desc}</p></article>)}</div></section>
+  <section id="services" className="mx-auto max-w-7xl px-4 pb-20 md:px-8"><div className="mb-7"><p className="text-sm font-black text-blue-600">الخدمات</p><h2 className="mt-2 text-3xl font-black text-slate-950">كل الأقسام في واجهة واحدة</h2></div><div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">{groups.map(({title,desc,icon:Icon})=><article key={title} className="card-hover rounded-3xl border border-slate-200 bg-white p-5 shadow-sm"><div className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-blue-600"><Icon size={22}/></div><h3 className="font-black text-slate-900">{title}</h3><p className="mt-2 text-xs font-medium leading-6 text-slate-400">{desc}</p></article>)}</div>
+   <Link href="/services/onefd" className="card-hover mt-5 flex flex-col gap-5 overflow-hidden rounded-3xl border border-blue-100 bg-slate-950 p-6 text-white shadow-xl shadow-slate-200 md:flex-row md:items-center md:justify-between">
+    <div className="flex items-center gap-4"><div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-blue-500/15 text-blue-300"><BookOpenCheck size={26}/></div><div><p className="text-xs font-black text-blue-300">أول خدمة مفعلة</p><h3 className="mt-1 text-xl font-black">تسجيلات المراسلة ONEFD</h3><p className="mt-2 text-xs font-bold leading-6 text-slate-400">استمارة الزبون + الوثائق + الدفع + إنشاء الطلب مباشرة داخل لوحة التحكم.</p></div></div>
+    <span className="inline-flex items-center justify-center gap-2 rounded-2xl bg-blue-600 px-5 py-3 text-sm font-black text-white">فتح الاستمارة <ArrowLeft size={17}/></span>
+   </Link>
+  </section>
  </div>
  </main>}
